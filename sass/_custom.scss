@@ -1,0 +1,536 @@
+/*--------------------------------------------------------------
+# Bootstrap
+--------------------------------------------------------------*/
+// Required
+@import "bootstrap/bootstrap";
+
+//colors
+$wag-darkblue: #426d94;
+$wag-mediumblue: #158db8;
+$wag-lightblue: #61c9ef;
+$wag-darkpurple: #421a2e;
+$wag-mediumpurple: #ac597e;
+$wag-lightpurple: #fbdbea;
+$wag-orange: #edaf1b;
+$wag-yellow: #fff568;
+$wag-grey: #b8b7b7;
+$wag-lightgrey: #ccc9c9;
+$wag-green: #8dc63f;
+
+//container
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+
+@mixin rounded-border {
+  border-radius: 20px 20px 20px 0;
+  -moz-border-radius: 20px 20px 20px 0;
+  -webkit-border-radius: 20px 20px 20px 0;
+}
+
+/*--------------------------------------------------------------
+# General styles
+--------------------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap");
+
+body {
+  background-color: black;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: $wag-darkblue;
+  transition: all 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: $wag-lightblue;
+  text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    font-size: 1.25em;
+    color: black;
+    text-shadow: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.navbar-dark {
+  background: black;
+}
+
+.navbar-toggler {
+  border: 0px;
+  padding: 0.25rem 0.25rem;
+}
+
+#header-image {
+  position: relative;
+  text-align: center;
+}
+
+#header-image img {
+  max-width: 100%;
+}
+
+.photo-credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.photo-credit p {
+  color: $wag-grey;
+  font-size: 0.6em;
+  text-align: right;
+  padding: 0 2em 0 0;
+  margin-bottom: 0.6em;
+  text-shadow: 1px 1px 2px rgba(250, 250, 241, 1);
+  @media only screen and (min-width: 801px) {
+    font-size: 0.8em;
+    padding: 0 1.5em 0 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Main Navigation
+--------------------------------------------------------------*/
+
+/* remove focus ring in safari on drop-down click */
+li:focus-within a {
+  outline: none;
+}
+
+@media (min-width: 800px) {
+  .nav-item {
+    margin: 0 1em;
+    font-size: 1em;
+  }
+}
+
+/*--------------------------------------------------------------
+# Home Page
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+main {
+  background: white;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  @include rounded-border;
+}
+
+.entry-footer span:not(:first-child) {
+  padding-left: 1em;
+}
+
+/*--------------------------------------------------------------
+# The Events Calendar
+--------------------------------------------------------------*/
+
+#tribe-events-content {
+  margin-bottom: 0 !important;
+}
+
+.tribe-events-l-container {
+  background: white;
+  margin-bottom: 1.5em;
+  @include rounded-border;
+}
+
+.tribe-events-back {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Sidebar and Widgets
+--------------------------------------------------------------*/
+
+.ui-widget-content {
+  background: white;
+  @include rounded-border();
+}
+
+//overwrite styles from events calendar
+.ui-widget-content a {
+  color: $wag-darkblue !important;
+}
+
+.ui-widget-content a:hover,
+.ui-widget-content a:focus {
+  color: $wag-lightblue !important;
+}
+
+.widget ol,
+.widget ul {
+  list-style: none;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  padding-inline-start: 0;
+}
+
+.tribe-events-list-widget-events {
+  padding: 0 !important;
+}
+
+.tribe-events-widget-link {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+
+.vcard {
+  border: 0px;
+  margin: 0;
+  padding: 0.3em;
+}
+
+#comments ol {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#comments footer {
+  background: transparent;
+  margin-top: 0;
+}
+
+.comment-metadata {
+  display: none;
+}
+
+.comment-list li {
+  margin: 0.4em 0;
+}
+
+.comment-body {
+  padding: 0.3em;
+}
+
+.children {
+  list-style: none;
+  margin-left: 0;
+}
+
+.children .comment-body {
+  padding-left: 1em;
+  background-color: #f3f3f3;
+}
+
+.comment-list .even .comment {
+  background-color: #f3f3f3;
+}
+
+.comment-list .odd .comment {
+  //background-color:#CCCCCC;
+}
+
+/*--------------------------------------------------------------
+# WooCommerce Single Product Page
+--------------------------------------------------------------*/
+
+/* remove "Description" link from description tab */
+.wc-tabs {
+  display: none;
+}
+
+/*fix awkward spacing above product title */
+.product .entry-summary {
+  margin-top: 0;
+}
+
+/* add some padding between product image and title/desc */
+.woocommerce-product-gallery {
+  @media (min-width: 768px) {
+    margin-right: 1.5em;
+  }
+}
+
+/*--------------------------------------------------------------
+# WooCommerce Checkout Page
+--------------------------------------------------------------*/
+
+/* fix gross background color behind woo messages */
+.woocommerce-message,
+.woocommerce-info,
+#payment {
+  background: rgba($color: #f8f8f8, $alpha: 0.8) !important;
+}
+
+/* fix woocommerce column styles conflict with bootstrap */
+.woocommerce-billing-fields .form-row,
+.woocommerce-shipping-fields .form-row,
+.woocommerce form .form-row {
+  display: block;
+}
+
+.woocommerce .col2-set .col-1,
+.woocommerce-page .col2-set .col-1,
+.woocommerce .col2-set .col-2,
+.woocommerce-page .col2-set .col-2 {
+  max-width: unset;
+}
+
+/* make checkout page 1 column */
+.woocommerce .woocommerce-checkout .col2-set .col-1,
+.woocommerce .woocommerce-checkout .col2-set .col-2 {
+  width: 100% !important;
+}
+
+.woocommerce .woocommerce-checkout .col2-set .col-1 {
+  margin-bottom: 30px;
+}
+
+/* fix order review area padding and alignments */
+#order_review_heading {
+  padding: 0.75em 0.25em;
+}
+
+#order_review {
+  padding: 0.25em 0.75em;
+}
+
+/*--------------------------------------------------------------
+# WooCommerce Archive Pages
+--------------------------------------------------------------*/
+
+/* fixed height for product titles to help alignment*/
+.woocommerce-loop-product__title {
+  min-height: 75px !important;
+}
+
+/* button styles */
+.woocommerce a.button {
+  background-color: $wag-green;
+  color: #fff;
+}
+
+.woocommerce a.button:hover {
+  background-color: #00bff3;
+  color: #fff;
+}
+
+.qty {
+  line-height: 1.9em; /* make quantity field height line up better with Add to Cart button */
+}
+
+/*--------------------------------------------------------------
+# Images
+--------------------------------------------------------------*/
+
+//put borders on images in these places
+//bootstrap thumbnail class adds its own border on photos pages
+.page .content img,
+.single-post .content img,
+.post-type-archive-product .content img,
+.foogallery-bootstrap-thumbnail .thumbnail img,
+.single-press .content p img,
+.single-product .content .images img {
+  border: 1px solid #ddd;
+  padding: 6px;
+  background-color: white;
+}
+
+.post-type-archive-product .content .product_shipping_class-shirt img,
+.single-product .content .product_shipping_class-shirt img {
+  //nah, I don't like borders around shirt images anywhere
+  border: none;
+}
+
+#payment ul.payment_methods li img {
+  //remove border styling from paypal image on checkout page
+  border: 0 !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+.product_list_widget li img {
+  padding: 2px !important;
+}
+
+/* default wordpress stuff */
+
+.entry-content img,
+.comment-content img,
+.widget img {
+  max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
+}
+
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="wp-post-image-"] {
+  height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+img.size-full {
+  max-width: 97.5%;
+  width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+}
+
+img {
+  margin: 0;
+  height: auto;
+  width: auto;
+  //box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.alignleft,
+img.alignleft {
+  clear: both;
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @media only screen and (min-width: 1025px) {
+    display: inline;
+    float: left;
+    margin: 4px 2% 4px 0;
+  }
+}
+
+.alignright,
+img.alignright {
+  clear: both;
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @media only screen and (min-width: 1025px) {
+    display: inline;
+    float: right;
+    margin: 4px 0 4px 2%;
+  }
+}
+
+.aligncenter,
+img.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.alignleft,
+img.alignright,
+img.aligncenter {
+  margin-bottom: 12px;
+}
+
+.wp-caption {
+  max-width: 100%;
+  font-size: 0.8em;
+  color: #7d7d7d;
+}
+
+.wp-caption-text {
+  margin-top: 0.9em;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.wilquote {
+  background: #333333;
+  color: white;
+  margin-bottom: 0;
+  @include rounded-border();
+}
+
+footer {
+  margin-top: 24px;
+  padding: 0.6em 0 0.5em 0;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline;
+}
+
+/* navigation links */
+
+.footer-nav {
+  margin: 0.4em 0 1.4em;
+  text-align: center;
+  @media (min-width: 801px) {
+    text-align: left;
+    margin: 0.4em 0 0;
+  }
+}
+
+.footer-nav a {
+  padding: 0 0.5em;
+  @media (max-width: 800px) {
+    padding: 0 1em;
+  }
+}
+
+/* social media icons */
+
+.footer-links li {
+  padding: 0.2em 0.3em;
+}
+
+.icon {
+  width: 2em;
+  height: 2em;
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.icons {
+  /* wrapper for the social media icons */
+  max-width: 340px;
+  margin: 0 auto; /* center these things on mobile */
+  @media (min-width: 801px) {
+    float: right; /* right align on desktop */
+    margin: 0 0.4em;
+  }
+}
+
+.memoriam {
+  color: $wag-lightgrey;
+  text-align: center;
+}
