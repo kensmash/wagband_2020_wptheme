@@ -52,7 +52,7 @@ strong {
 
 a {
   text-decoration: none;
-  color: $wag-darkblue;
+  color: $wag-mediumblue;
   transition: all 0.3s ease;
 }
 
@@ -60,6 +60,10 @@ a:hover,
 a:focus {
   color: $wag-lightblue;
   text-decoration: none;
+}
+
+a:visited {
+  color: $wag-darkblue;
 }
 
 @media (max-width: 992px) {
@@ -88,6 +92,14 @@ a:focus {
 .navbar-toggler {
   border: 0px;
   padding: 0.25rem 0.25rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4em;
+  @media (min-width: 1000px) {
+    font-size: 3em;
+  }
 }
 
 #header-image {
@@ -477,11 +489,17 @@ footer {
 
 footer ul {
   margin: 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
   padding: 0;
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
 }
 
 footer ul li {
-  display: inline;
+  list-style-type: none;
 }
 
 /* navigation links */
@@ -503,6 +521,16 @@ footer ul li {
 }
 
 /* social media icons */
+.footer-links {
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+  }
+}
+
+.footer-links li {
+  width: 3em;
+  justify-content: center;
+}
 
 .footer-links li {
   padding: 0.2em 0.3em;
@@ -518,16 +546,6 @@ footer ul li {
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
   transform: scale(1.3);
-}
-
-.icons {
-  /* wrapper for the social media icons */
-  max-width: 340px;
-  margin: 0 auto; /* center these things on mobile */
-  @media (min-width: 801px) {
-    float: right; /* right align on desktop */
-    margin: 0 0.4em;
-  }
 }
 
 .memoriam {
