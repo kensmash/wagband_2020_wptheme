@@ -9,6 +9,10 @@
 
 ?>
 
+<?php if ( is_singular() ) : 
+        the_title( '<h1 class="entry-title">', '</h1>' );
+		the_content();
+else : ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class("row"); ?>>
     <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="card">
@@ -24,3 +28,4 @@
         </div>
     </div>
 </article>
+<?php endif; ?>

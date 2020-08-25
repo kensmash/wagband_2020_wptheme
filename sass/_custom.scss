@@ -95,6 +95,15 @@ hr {
   background: black;
 }
 
+.navbar-dark a,
+.navbar-dark a:visited {
+  color: white !important;
+}
+
+.navbar-dark a:hover {
+  color: $wag-lightblue !important;
+}
+
 .navbar-toggler {
   border: 0px;
   padding: 0.25rem 0.25rem;
@@ -102,7 +111,9 @@ hr {
 
 .navbar-brand {
   font-weight: 700;
-  font-size: 1.4em;
+  font-size: 2em;
+  padding-top: 0;
+  margin-top: 0;
   @media (min-width: 1000px) {
     font-size: 3em;
   }
@@ -139,6 +150,12 @@ hr {
 /*--------------------------------------------------------------
 # Main Navigation
 --------------------------------------------------------------*/
+
+#menu-top-nav {
+  @media (min-width: 800px) {
+    margin-top: -1em;
+  }
+}
 
 /* remove focus ring in safari on drop-down click */
 li:focus-within a {

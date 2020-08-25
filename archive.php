@@ -33,7 +33,7 @@ get_header();
 				 */
 				get_template_part( 'template-parts/content', get_post_type() ); 
 
-				if ('photo' !== get_post_type() || $wp_query->current_post < $wp_query->post_count-1) {echo '<hr>';} 		
+				if ('photos' !== get_post_type()) {echo '<hr>';} 		
 
 	 endwhile;
 
