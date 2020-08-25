@@ -9920,18 +9920,24 @@ strong {
 
 a {
   text-decoration: none;
-  color: #158db8;
+  color: #158db8 !important;
   transition: all 0.3s ease;
 }
 
 a:hover,
 a:focus {
-  color: #61c9ef;
+  color: #61c9ef !important;
   text-decoration: none;
 }
 
 a:visited {
-  color: #426d94;
+  color: #426d94 !important;
+}
+
+hr {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 992px) {
@@ -10032,6 +10038,14 @@ main {
   padding-left: 1em;
 }
 
+.page-title {
+  margin-bottom: 0.75em;
+}
+
+.entry-title {
+  margin-top: 0.25em;
+}
+
 /*--------------------------------------------------------------
 # The Events Calendar
 --------------------------------------------------------------*/
@@ -10061,15 +10075,6 @@ main {
   -webkit-border-radius: 20px 20px 20px 0;
 }
 
-.ui-widget-content a {
-  color: #426d94 !important;
-}
-
-.ui-widget-content a:hover,
-.ui-widget-content a:focus {
-  color: #61c9ef !important;
-}
-
 .widget ol,
 .widget ul {
   list-style: none;
@@ -10084,52 +10089,6 @@ main {
 
 .tribe-events-widget-link {
   display: none;
-}
-
-/*--------------------------------------------------------------
-# Comments
---------------------------------------------------------------*/
-.vcard {
-  border: 0px;
-  margin: 0;
-  padding: 0.3em;
-}
-
-#comments ol {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-#comments footer {
-  background: transparent;
-  margin-top: 0;
-}
-
-.comment-metadata {
-  display: none;
-}
-
-.comment-list li {
-  margin: 0.4em 0;
-}
-
-.comment-body {
-  padding: 0.3em;
-}
-
-.children {
-  list-style: none;
-  margin-left: 0;
-}
-
-.children .comment-body {
-  padding-left: 1em;
-  background-color: #f3f3f3;
-}
-
-.comment-list .even .comment {
-  background-color: #f3f3f3;
 }
 
 /*--------------------------------------------------------------
@@ -10150,6 +10109,30 @@ main {
   .woocommerce-product-gallery {
     margin-right: 1.5em;
   }
+}
+
+/*--------------------------------------------------------------
+# WooCommerce Archive Pages
+--------------------------------------------------------------*/
+/* fixed height for product titles to help alignment*/
+.woocommerce-loop-product__title {
+  min-height: 75px !important;
+}
+
+/* button styles */
+.woocommerce a.button {
+  background-color: #8dc63f;
+  color: #fff;
+}
+
+.woocommerce a.button:hover {
+  background-color: #00bff3;
+  color: #fff;
+}
+
+.qty {
+  line-height: 1.9em;
+  /* make quantity field height line up better with Add to Cart button */
 }
 
 /*--------------------------------------------------------------
@@ -10196,27 +10179,49 @@ main {
 }
 
 /*--------------------------------------------------------------
-# WooCommerce Archive Pages
+# Comments
 --------------------------------------------------------------*/
-/* fixed height for product titles to help alignment*/
-.woocommerce-loop-product__title {
-  min-height: 75px !important;
+.vcard {
+  border: 0px;
+  margin: 0;
+  padding: 0.3em;
 }
 
-/* button styles */
-.woocommerce a.button {
-  background-color: #8dc63f;
-  color: #fff;
+#comments ol {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
-.woocommerce a.button:hover {
-  background-color: #00bff3;
-  color: #fff;
+#comments footer {
+  background: transparent;
+  margin-top: 0;
 }
 
-.qty {
-  line-height: 1.9em;
-  /* make quantity field height line up better with Add to Cart button */
+.comment-metadata {
+  display: none;
+}
+
+.comment-list li {
+  margin: 0.4em 0;
+}
+
+.comment-body {
+  padding: 0.3em;
+}
+
+.children {
+  list-style: none;
+  margin-left: 0;
+}
+
+.children .comment-body {
+  padding-left: 1em;
+  background-color: #f3f3f3;
+}
+
+.comment-list .even .comment {
+  background-color: #f3f3f3;
 }
 
 /*--------------------------------------------------------------

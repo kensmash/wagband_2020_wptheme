@@ -295,3 +295,38 @@ function wag_custom_comments( $comment, $args, $depth ) {
         break;
     endswitch;
 }
+
+/*-----------------------------------------------------------------------------------*/
+/* Enable support for custom thumbnail size, cropped @link https://codex.wordpress.org/Function_Reference/add_image_size
+/*-----------------------------------------------------------------------------------*/
+
+add_action( 'after_setup_theme', 'wag_theme_setup' );
+	function wag_theme_setup() {
+	add_image_size( 'photo-thumb', 400, 400, array( 'center', 'center' ) ); // Hard crop center center
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* remove archive from title on archive pages @link https://developer.wordpress.org/reference/functions/get_the_archive_title/
+/*-----------------------------------------------------------------------------------*/
+
+function my_theme_archive_title( $title ) {
+	if ( is_category() ) {
+		$title = single_cat_title( 'Category: ', false );
+	} elseif ( is_post_type_archive('podcast') ) {
+		$title = "Podcast Episodes";
+	} elseif ( is_post_type_archive('scripts') ) {
+		$title = "Scripts";
+	} elseif ( is_tag() ) {
+		$title = single_tag_title( 'Posts Tagged: ', false );
+	} elseif ( is_author() ) {
+		$title = 'Posts by <span class="vcard">' . get_the_author() . '</span>';
+	} elseif ( is_post_type_archive() ) {
+		$title = post_type_archive_title( '', false );
+	} elseif ( is_tax() ) {
+		$title = single_term_title( '', false );
+	}
+	
+	return $title;
+}
+	
+add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
