@@ -9920,18 +9920,18 @@ strong {
 
 a {
   text-decoration: none;
-  color: #158db8 !important;
+  color: #158db8;
   transition: all 0.3s ease;
 }
 
 a:hover,
 a:focus {
-  color: #61c9ef !important;
+  color: #61c9ef;
   text-decoration: none;
 }
 
 a:visited {
-  color: #426d94 !important;
+  color: #426d94;
 }
 
 hr {

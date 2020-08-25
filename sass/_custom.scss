@@ -52,18 +52,18 @@ strong {
 
 a {
   text-decoration: none;
-  color: $wag-mediumblue !important;
+  color: $wag-mediumblue;
   transition: all 0.3s ease;
 }
 
 a:hover,
 a:focus {
-  color: $wag-lightblue !important;
+  color: $wag-lightblue;
   text-decoration: none;
 }
 
 a:visited {
-  color: $wag-darkblue !important;
+  color: $wag-darkblue;
 }
 
 hr {

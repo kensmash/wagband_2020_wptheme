@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
-        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+        <h1 class="entry-title">The Wag&rsquo;s Next Show!
     </header>
 
     <div class="entry-content">
@@ -26,8 +26,13 @@
         echo '<h4>' . $post->post_title . '</h4>';
         echo ' ' . tribe_get_start_date( $post ) . ' ';
        
-          
-       
+        echo tribe_event_featured_image( $post->ID, 'full' );
+
+        echo get_the_content();
+
+        echo tribe_get_venue( $post );
+        echo tribe_get_address( $post );
+        echo tribe_get_city( $post );
   
         } ?>
 
