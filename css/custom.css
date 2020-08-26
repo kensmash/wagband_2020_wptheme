@@ -10039,6 +10039,11 @@ li:focus-within a {
 /*--------------------------------------------------------------
 # Home Page
 --------------------------------------------------------------*/
+.home-event-meta p {
+  font-size: 0.8em;
+  margin: 0;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -10061,6 +10066,11 @@ main {
 
 .entry-title {
   margin-top: 0.25em;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -10104,8 +10114,8 @@ main {
   padding: 0 !important;
 }
 
-.tribe-events-widget-link {
-  display: none;
+.tribe-mini-calendar-event {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
 /*--------------------------------------------------------------
