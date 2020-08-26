@@ -53,7 +53,7 @@
 	</header><!-- #masthead -->
 
 
-	<div class="container">
+	<div class="container mt-n5">
 		<div id="header-image">
 			<?php
 				// load random photo from header-images folder

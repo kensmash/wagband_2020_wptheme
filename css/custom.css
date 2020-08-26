@@ -9957,7 +9957,8 @@ hr {
 # Header
 --------------------------------------------------------------*/
 .navbar-dark {
-  background: black;
+  background: rgba(0, 0, 0, 0);
+  z-index: 5;
 }
 
 .navbar-dark a,
@@ -9994,11 +9995,6 @@ hr {
 #header-image img {
   max-width: 100%;
 }
-@media (min-width: 900px) {
-  #header-image img {
-    max-width: 94%;
-  }
-}
 
 .photo-credit {
   position: absolute;
@@ -10012,7 +10008,7 @@ hr {
   text-align: right;
   padding: 0 2em 0 0;
   margin-bottom: 0.6em;
-  text-shadow: 1px 1px 2px #fafaf1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 @media only screen and (min-width: 801px) {
   .photo-credit p {
@@ -10102,6 +10098,7 @@ abbr[data-original-title] {
   background: white;
   margin-bottom: 1.5em;
   padding-top: 1em !important;
+  padding-bottom: 1em !important;
   border-radius: 20px 20px 20px 0;
   -moz-border-radius: 20px 20px 20px 0;
   -webkit-border-radius: 20px 20px 20px 0;
@@ -10154,7 +10151,7 @@ abbr[data-original-title] {
 
 .tribe-events-title {
   font-size: 1.5em !important;
-  line-height: 1 !important;
+  line-height: 1.2 !important;
 }
 
 .tribe-events-widget-link {
