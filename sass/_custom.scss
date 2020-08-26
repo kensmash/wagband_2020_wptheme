@@ -38,7 +38,7 @@ $wag-green: #8dc63f;
 # General styles
 --------------------------------------------------------------*/
 
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;800&display=swap");
 
 body {
   background-color: black;
@@ -47,7 +47,7 @@ body {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 a {
@@ -126,6 +126,9 @@ hr {
 
 #header-image img {
   max-width: 100%;
+  @media (min-width: 900px) {
+    max-width: 94%;
+  }
 }
 
 .photo-credit {
@@ -173,6 +176,14 @@ li:focus-within a {
 # Home Page
 --------------------------------------------------------------*/
 
+.homepage-nextshow {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  @media (min-width: 800px) {
+    border-top: 0px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
 .home-event-meta p {
   font-size: 0.8em;
   margin: 0;
@@ -185,8 +196,11 @@ li:focus-within a {
 main {
   background: white;
   padding: 1.5em;
-  margin-bottom: 1.5em;
   @include rounded-border;
+}
+
+.page {
+  margin: 0;
 }
 
 .entry-footer span:not(:first-child) {
@@ -217,10 +231,17 @@ abbr[data-original-title] {
 .tribe-events-l-container {
   background: white;
   margin-bottom: 1.5em;
+  padding-top: 1em !important;
   @include rounded-border;
 }
 
+/*hide annoying back link at top of single events page*/
 .tribe-events-back {
+  display: none !important;
+}
+
+/*hide annoying export button at bottom of events list*/
+.tribe-events-c-ical {
   display: none !important;
 }
 
@@ -247,6 +268,29 @@ abbr[data-original-title] {
 
 .tribe-mini-calendar-event {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-title,
+.tribe-events-title {
+  font-weight: 300 !important;
+}
+
+.tribe-events-title {
+  font-size: 1.25em !important;
+}
+
+.tribe-events-widget-link {
+  font-size: 0.75em;
+}
+
+.woocommerce ul.product_list_widget li img {
+  margin-top: 6px !important;
+  margin-left: 20px !important;
+}
+
+.product_list_widget li {
+  line-height: 1.2 !important;
+  margin-bottom: 0.75em !important;
 }
 
 /*--------------------------------------------------------------
