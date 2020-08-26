@@ -9966,7 +9966,7 @@ hr {
 }
 
 .navbar-dark a:hover {
-  color: #61c9ef !important;
+  color: #8dc63f !important;
 }
 
 .navbar-toggler {
@@ -10117,6 +10117,10 @@ abbr[data-original-title] {
   display: none !important;
 }
 
+.tribe-events-virtual-single-marker {
+  background-color: #fff568;
+}
+
 /*--------------------------------------------------------------
 # Sidebar and Widgets
 --------------------------------------------------------------*/
@@ -10149,7 +10153,8 @@ abbr[data-original-title] {
 }
 
 .tribe-events-title {
-  font-size: 1.25em !important;
+  font-size: 1.5em !important;
+  line-height: 1 !important;
 }
 
 .tribe-events-widget-link {

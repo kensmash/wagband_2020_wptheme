@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("row mb-4"); ?>>
-    <div class="col-md-8 pr-md-3">
+    <div class="col-md-8 pr-md-4">
         <header class="entry-header mt-n1">
             <h2 class="entry-title">Latest News</h2>
         </header>

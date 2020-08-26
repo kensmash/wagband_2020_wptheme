@@ -101,7 +101,7 @@ hr {
 }
 
 .navbar-dark a:hover {
-  color: $wag-lightblue !important;
+  color: $wag-green !important;
 }
 
 .navbar-toggler {
@@ -245,6 +245,10 @@ abbr[data-original-title] {
   display: none !important;
 }
 
+.tribe-events-virtual-single-marker {
+  background-color: $wag-yellow;
+}
+
 /*--------------------------------------------------------------
 # Sidebar and Widgets
 --------------------------------------------------------------*/
@@ -276,7 +280,8 @@ abbr[data-original-title] {
 }
 
 .tribe-events-title {
-  font-size: 1.25em !important;
+  font-size: 1.5em !important;
+  line-height: 1 !important;
 }
 
 .tribe-events-widget-link {
