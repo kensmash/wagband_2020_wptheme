@@ -127,7 +127,7 @@ function wagband_2020_widgets_init() {
 			'name'          => esc_html__( 'Sidebar', 'wagband_2020' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'wagband_2020' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s col-lg-6"><div class="ui-widget-content p-4 h-100">',
+			'before_widget' => '<section id="%1$s" class="widget %2$s col-lg-4"><div class="ui-widget-content p-4 h-100">',
 			'after_widget'  => '</div></section>',
 			'before_title'  => '<h2 class="widget-title mb-4">',
 			'after_title'   => '</h2>',
