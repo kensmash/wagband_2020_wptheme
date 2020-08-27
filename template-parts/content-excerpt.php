@@ -9,7 +9,7 @@
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" class="mb-3">
+<div id="post-<?php the_ID(); ?>" class="mb-3 clearfix">
 
     <h4><a href="<?php the_permalink();?>" rel="bookmark"><?php the_title(); ?></a></h4>
     <p class="card-text small text-black-50">
@@ -20,5 +20,7 @@
     </p>
 
     <?php the_excerpt(); ?>
+
+    <hr>
 
 </div>

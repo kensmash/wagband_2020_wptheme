@@ -38,12 +38,13 @@ get_header();
 				$counter++; // add +1 to count for each post
 				
 				if ($counter === 1 AND $paged <= 1) { 
+					echo "<div class='clearfix'>";
 					get_template_part( 'template-parts/content' , get_post_type() ); 
+					echo "</div>";
+					echo "<hr/>";
 				} else { 
 					get_template_part( 'template-parts/content-excerpt' ); 
 				}
-
-				echo '<hr>';
 
 			endwhile;
 
