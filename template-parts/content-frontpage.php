@@ -27,6 +27,7 @@
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
             <h2 class="mb-4"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
             <?php the_content(); ?>
 
             <?php endwhile; ?>
@@ -58,6 +59,14 @@
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
             <div class="home-event-meta mb-4 text-secondary">
+
+                <?php
+                //Test if event categories contains virtual          
+                $categories = tribe_get_text_categories(); 
+                $word = "Virtual";
+                if(strpos($categories, $word) !== false){
+                    echo "Virtual Event";
+                } ?>
                 <p><?php echo tribe_get_start_date( $post ) . ' - ' . tribe_get_end_time( $post ) ?></p>
                 <p><?php echo tribe_get_venue( $post ) ?></p>
                 <p><?php echo tribe_get_address( $post ) ?></p>
