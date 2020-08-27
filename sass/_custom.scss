@@ -34,16 +34,28 @@ $wag-green: #8dc63f;
   -webkit-border-radius: 20px 20px 20px 0;
 }
 
+@mixin wag-font-family {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+}
+
 /*--------------------------------------------------------------
 # General styles
 --------------------------------------------------------------*/
 
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;900&family=Roboto:wght@300;500;700;900&display=swap");
 
 body {
   background-color: black;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @include wag-font-family();
+  font-weight: 500;
 }
 
 strong {
@@ -79,14 +91,6 @@ hr {
   }
 }
 
-@media (min-width: 800px) {
-  body {
-    font-size: 1.25em;
-    color: black;
-    text-shadow: none;
-  }
-}
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -94,6 +98,7 @@ hr {
 .navbar-dark {
   background: rgba(0, 0, 0, 0);
   z-index: 5;
+  @include wag-font-family();
 }
 
 .navbar-dark a,
@@ -111,12 +116,13 @@ hr {
 }
 
 .navbar-brand {
-  font-weight: 700;
+  @include wag-font-family();
+  font-weight: 800;
   font-size: 2em;
   padding-top: 0;
   margin-top: 0;
   @media (min-width: 1000px) {
-    font-size: 3em;
+    font-size: 3.3em;
   }
 }
 
@@ -226,6 +232,10 @@ abbr[data-original-title] {
   margin-bottom: 0 !important;
 }
 
+.tribe-events-calendar-list__event-header a:hover {
+  text-decoration: none !important;
+}
+
 .tribe-events-l-container {
   background: white;
   margin-bottom: 1.5em;
@@ -275,11 +285,11 @@ abbr[data-original-title] {
 
 .product-title,
 .tribe-events-title {
-  font-weight: 300 !important;
+  font-weight: 400 !important;
 }
 
 .tribe-events-title {
-  font-size: 1.5em !important;
+  font-size: 1.2em !important;
   line-height: 1.2 !important;
 }
 
