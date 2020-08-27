@@ -10085,11 +10085,6 @@ main {
   margin-top: 0.25em;
 }
 
-abbr[title],
-abbr[data-original-title] {
-  text-decoration: none;
-}
-
 /*--------------------------------------------------------------
 # The Events Calendar
 --------------------------------------------------------------*/
@@ -10123,6 +10118,12 @@ abbr[data-original-title] {
 
 .tribe-events-virtual-single-marker {
   background-color: #fff568;
+}
+
+/*fix state abbreviations getting underlines*/
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: none;
 }
 
 .tribe-common .tribe-common-h5,
@@ -10452,21 +10453,29 @@ footer {
   padding: 0.6em 0 0.5em 0;
 }
 
+/* center the footer nav links on mobile and break them onto two lines */
 footer ul {
   margin: 0;
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   justify-content: center;
   padding: 0;
 }
 @media (min-width: 768px) {
   footer ul {
+    flex-flow: row nowrap;
     justify-content: flex-start;
   }
 }
 
 footer ul li {
+  margin: 0.25em 0;
   list-style-type: none;
+}
+@media (min-width: 768px) {
+  footer ul li {
+    margin: 0;
+  }
 }
 
 /* navigation links */
