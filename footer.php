@@ -25,37 +25,43 @@
 
 				<ul class="footer-links">
 					<li>
-						<a href="https://www.facebook.com/thewagband" target="_blank" alt="Facebook" title="Facebook">
+						<a href="https://www.facebook.com/thewagband" target="_blank" rel="noopener" alt="Facebook" title="Facebook">
 							<svg class="icon">
 								<use xlink:href="<?php bloginfo('template_directory'); ?>/images/footer-icons.svg#facebook" /></svg>
 						</a>
 					</li>
 					<li>
-						<a href="https://twitter.com/thewag" target="_blank" alt="Twitter" title="Twitter">
-							<svg class="icon">
-								<use xlink:href="<?php bloginfo('template_directory'); ?>/images/footer-icons.svg#twitter" /></svg>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.youtube.com/user/TheWagBand" target="_blank" alt="YouTube" title="Youtube">
+						<a href="https://www.youtube.com/user/TheWagBand" target="_blank" rel="noopener" alt="YouTube" title="Youtube">
 							<svg class="icon">
 								<use xlink:href="<?php bloginfo('template_directory'); ?>/images/footer-icons.svg#youtube" /></svg>
 						</a>
 					</li>
 					<li>
-						<a href="https://soundcloud.com/the-wag" target="_blank" alt="SoundCloud" title="SoundCloud">
+						<a href="https://www.instagram.com/thewagband/" target="_blank" rel="noopener" alt="Instagram" title="Instagram">
+							<svg class="icon">
+								<use xlink:href="<?php bloginfo('template_directory'); ?>/images/footer-icons.svg#instagram" /></svg>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/thewag" target="_blank" rel="noopener" alt="Twitter" title="Twitter">
+							<svg class="icon">
+								<use xlink:href="<?php bloginfo('template_directory'); ?>/images/footer-icons.svg#twitter" /></svg>
+						</a>
+					</li>
+					<li>
+						<a href="https://soundcloud.com/the-wag" target="_blank" rel="noopener" alt="SoundCloud" title="SoundCloud">
 							<svg class="icon">
 								<use xlink:href="<?php bloginfo('template_directory'); ?>/images/footer-icons.svg#soundcloud" /></svg>
 						</a>
 					</li>
 					<li>
-						<a href="http://open.spotify.com/artist/4wQcvOVeyHtP3wGrSJ1KUL" target="_blank" alt="Spotify" title="Spotify">
+						<a href="http://open.spotify.com/artist/4wQcvOVeyHtP3wGrSJ1KUL" target="_blank" rel="noopener" alt="Spotify" title="Spotify">
 							<svg class="icon">
 								<use xlink:href="<?php bloginfo('template_directory'); ?>/images/footer-icons.svg#spotify" /></svg>
 						</a>
 					</li>
 					<li>
-						<a href="https://itunes.apple.com/us/artist/the-wag/id186833713" target="_blank" alt="iTunes" title="The Wag on iTunes">
+						<a href="https://itunes.apple.com/us/artist/the-wag/id186833713" target="_blank" rel="noopener" alt="iTunes" title="The Wag on iTunes">
 							<svg class="icon">
 								<use xlink:href="<?php bloginfo('template_directory'); ?>/images/footer-icons.svg#apple" /></svg>
 						</a>
