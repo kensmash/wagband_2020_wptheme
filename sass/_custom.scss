@@ -38,11 +38,15 @@ $wag-green: #8dc63f;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
 }
 
+@mixin border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 /*--------------------------------------------------------------
 # General styles
 --------------------------------------------------------------*/
 
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;900&family=Roboto:wght@300;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;900&display=swap");
 
 body {
   background-color: black;
@@ -258,6 +262,11 @@ abbr[data-original-title] {
   background-color: $wag-yellow;
 }
 
+.tribe-common .tribe-common-h5,
+.tribe-common .tribe-common-h6 {
+  @include wag-font-family();
+}
+
 /*--------------------------------------------------------------
 # Sidebar and Widgets
 --------------------------------------------------------------*/
@@ -304,8 +313,11 @@ abbr[data-original-title] {
 }
 
 .product_list_widget li {
+  @include wag-font-family();
+  @include border-bottom();
   line-height: 1.2 !important;
   margin-bottom: 0.75em !important;
+  padding-bottom: 1em !important;
 }
 
 /*--------------------------------------------------------------
@@ -562,10 +574,13 @@ img.aligncenter {
 --------------------------------------------------------------*/
 
 .wilquote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #333333;
   color: white;
-  margin-bottom: 0;
   @include rounded-border();
+  @include wag-font-family();
 }
 
 footer {
