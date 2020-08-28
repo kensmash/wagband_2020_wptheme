@@ -180,6 +180,14 @@ li:focus-within a {
   }
 }
 
+.dropdown-menu {
+  background-color: black;
+}
+
+.dropdown-menu .nav-item {
+  margin: 0;
+}
+
 /*--------------------------------------------------------------
 # Home Page
 --------------------------------------------------------------*/
@@ -204,6 +212,10 @@ li:focus-within a {
 main {
   background: white;
   padding: 1.5em;
+  @include rounded-border;
+}
+
+.wp-playlist {
   @include rounded-border;
 }
 

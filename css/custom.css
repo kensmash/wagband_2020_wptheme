@@ -10040,6 +10040,14 @@ li:focus-within a {
     font-size: 1em;
   }
 }
+.dropdown-menu {
+  background-color: black;
+}
+
+.dropdown-menu .nav-item {
+  margin: 0;
+}
+
 /*--------------------------------------------------------------
 # Home Page
 --------------------------------------------------------------*/
@@ -10064,6 +10072,12 @@ li:focus-within a {
 main {
   background: white;
   padding: 1.5em;
+  border-radius: 20px 20px 20px 0;
+  -moz-border-radius: 20px 20px 20px 0;
+  -webkit-border-radius: 20px 20px 20px 0;
+}
+
+.wp-playlist {
   border-radius: 20px 20px 20px 0;
   -moz-border-radius: 20px 20px 20px 0;
   -webkit-border-radius: 20px 20px 20px 0;
