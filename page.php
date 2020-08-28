@@ -21,11 +21,9 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			if ('events' !== get_post_type()) {
-				get_template_part( 'template-parts/content', 'event' );
-			} else {
-				get_template_part( 'template-parts/content', 'page' );
-			}
+		
+			get_template_part( 'template-parts/content', 'page' );
+		
 		
 		endwhile; // End of the loop.
 		?>
