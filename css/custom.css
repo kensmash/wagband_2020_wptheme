@@ -10334,6 +10334,10 @@ abbr[data-original-title] {
 /*--------------------------------------------------------------
 # Images
 --------------------------------------------------------------*/
+.wp-block-gallery {
+  margin-top: 2em;
+}
+
 .page .content img,
 .single-post .content img,
 .post-type-archive-product .content img,

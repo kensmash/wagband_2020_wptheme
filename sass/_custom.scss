@@ -472,6 +472,10 @@ abbr[data-original-title] {
 # Images
 --------------------------------------------------------------*/
 
+.wp-block-gallery {
+  margin-top: 2em;
+}
+
 //put borders on images in these places
 //bootstrap thumbnail class adds its own border on photos pages
 .page .content img,
