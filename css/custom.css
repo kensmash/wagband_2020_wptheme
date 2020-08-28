@@ -10024,7 +10024,7 @@ hr {
 # Main Navigation
 --------------------------------------------------------------*/
 @media (min-width: 800px) {
-  #menu-top-nav {
+  #menu-right-top-bar {
     margin-top: -1em;
   }
 }
@@ -10085,6 +10085,11 @@ main {
 
 .wp-playlist-item {
   padding: 0.5em 3px !important;
+}
+
+figcaption {
+  font-size: 0.75em;
+  color: gray;
 }
 
 .page {
