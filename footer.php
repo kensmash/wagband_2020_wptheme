@@ -17,11 +17,11 @@
 	<div class="container">
 
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-lg-6">
 				<?php wp_nav_menu( array( 'menu' => 'Footer Menu', 'menu_class' => 'footer-nav' ) ); ?>
 			</div> <!-- /col-md-6 -->
 
-			<div class="col-md-6">
+			<div class="col-lg-6">
 
 				<ul class="footer-links">
 					<li>
