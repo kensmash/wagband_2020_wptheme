@@ -9,11 +9,5 @@
 
 ?>
 
-<?php if ( is_singular() ) : 
-        the_title( '<h1 class="entry-title">', '</h1>' );
-		the_content();
-else : 
-    
-    the_title( '<h1 class="entry-title">', '</h1>' );
-		
-endif; ?>
+<?php the_title( '<h2 class="entry-title mb-4">', '</h2>' ); ?>
+<div class="p-2"><?php the_content();?></div>
