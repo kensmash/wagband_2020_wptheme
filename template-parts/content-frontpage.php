@@ -42,7 +42,7 @@
     <div class="col-md-4 pt-4 pt-md-0 pl-md-4 homepage-nextshow">
 
         <header class="entry-header mt-n1">
-            <h2 class="entry-title">The Wag&rsquo;s Next Show!</h2>
+            <h2 class="entry-title">Upcoming Event</h2>
         </header>
 
         <div class="entry-content">
@@ -66,11 +66,14 @@
                 $word = "Virtual";
                 if(strpos($categories, $word) !== false){
                     echo "Virtual Event";
-                } ?>
-                <p><?php echo tribe_get_start_date( $post ) . ' - ' . tribe_get_end_time( $post ) ?></p>
+                } else { ?>
                 <p><?php echo tribe_get_venue( $post ) ?></p>
                 <p><?php echo tribe_get_address( $post ) ?></p>
                 <p><?php echo tribe_get_city( $post ) . ' ' . tribe_get_state( $post )?></p>
+                <?php } ?>
+                <p><?php echo tribe_get_start_date( $post ) . ' - ' . tribe_get_end_time( $post ) ?></p>
+
+
             </div>
 
             <?php the_content(); 

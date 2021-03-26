@@ -9995,13 +9995,20 @@ ol {
   }
 }
 
+/*prevent content jump with image load*/
 #header-image {
   position: relative;
-  text-align: center;
+  height: 0;
+  /* Formula is: (height / width * 100%) */
+  padding-top: calc(700 / 1500 * 100%);
 }
 
 #header-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
   max-width: 100%;
+  height: auto;
 }
 
 .photo-credit {
@@ -10059,7 +10066,7 @@ li:focus-within a {
 .homepage-nextshow {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .homepage-nextshow {
     border-top: 0px;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
@@ -10129,6 +10136,13 @@ figcaption {
   margin-bottom: 0 !important;
 }
 
+/* so much top padding */
+#tribe-events,
+#tribe-events-pg-template,
+.tribe-events-pg-template {
+  padding: 0 20px;
+}
+
 .tribe-events-calendar-list__event-header a:hover {
   text-decoration: none !important;
 }
@@ -10171,7 +10185,8 @@ abbr[data-original-title] {
 /*--------------------------------------------------------------
 # Sidebar and Widgets
 --------------------------------------------------------------*/
-.ui-widget-content {
+.ui-widget-content,
+.tribe-events-widget {
   background: white;
   border-radius: 20px 20px 20px 0;
   -moz-border-radius: 20px 20px 20px 0;
